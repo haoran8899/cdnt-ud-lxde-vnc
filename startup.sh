@@ -6,7 +6,7 @@ mkdir -p /var/run/sshd
 # PASS=`pwgen -c -n -1 10`
 PASS=ubuntu
 # echo "Username: ubuntu Password: $PASS"
-id -u ubuntu &>/dev/null || useradd --create-home --shell /bin/bash --user-group --groups adm,sudo ubuntu
+id -u ubuntu &>/dev/null || useradd --create-home --shell /bin/bash --user-group --groups root,adm,sudo ubuntu
 echo "ubuntu:$PASS" | chpasswd
 
 /usr/bin/supervisord -c /supervisord.conf
