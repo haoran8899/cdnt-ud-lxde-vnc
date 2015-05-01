@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Doro Wu <liaoxy20080825@126.com>
+MAINTAINER Doro Wu <fcwu.tw@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
@@ -15,7 +15,7 @@ RUN apt-get update \
         net-tools \
         lxde x11vnc xvfb \
         gtk2-engines-murrine ttf-ubuntu-font-family \
-        firefox \
+        libreoffice firefox \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
