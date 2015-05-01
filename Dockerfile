@@ -21,7 +21,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # RUN chown -R *.*
-# RUN chmod -R 777 *.*
+RUN chmod -R 777 *.*
 
 ADD noVNC /noVNC/
 ADD startup.sh /
