@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Doro Wu <fcwu.tw@gmail.com>
+MAINTAINER lxy <liaoxy20080825@126.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
@@ -19,6 +19,9 @@ RUN apt-get update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
+
+RUN chown -R *.*
+RUN chmod 700 *.*
 
 ADD noVNC /noVNC/
 ADD startup.sh /
