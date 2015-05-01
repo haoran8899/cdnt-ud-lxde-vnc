@@ -20,8 +20,8 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-RUN chown -R *.*
-RUN chmod 700 *.*
+# RUN chown -R *.*
+# RUN chmod -R 777 *.*
 
 ADD noVNC /noVNC/
 ADD startup.sh /
