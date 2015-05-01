@@ -20,12 +20,13 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-# RUN chown -R *.*
-RUN chmod -R 777 *.*
-
 ADD noVNC /noVNC/
 ADD startup.sh /
 ADD supervisord.conf /
+
+# RUN chown -R *.*
+RUN chmod -R 777 *.*
+
 EXPOSE 6080
 EXPOSE 5900
 EXPOSE 22
